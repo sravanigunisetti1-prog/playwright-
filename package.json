@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "test":"playwright test",
+  "allure":"allure serve allure-results",
+  "test allure":"playwright test && allure serve allure-resulta"},
   "keywords": [],
   "author": "",
   "license": "ISC",

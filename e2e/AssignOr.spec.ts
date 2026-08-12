@@ -19,7 +19,7 @@ test('TC_LOGIN_01', async({page})=>{
 )
 // // TC_LOGIN_02 test case//
 
-test.only('TC_LOGIN_02', async({page})=>{
+test('TC_LOGIN_02', async({page})=>{
 
  await page.getByPlaceholder('Username').fill('Admin');
    await page.getByPlaceholder('Password').fill('wrong123');
@@ -30,7 +30,7 @@ test.only('TC_LOGIN_02', async({page})=>{
 })
 
 //test case 3//
-test.only('TC_LOGIN_03', async({page})=>{
+test('TC_LOGIN_03', async({page})=>{
 
  await page.getByPlaceholder('Username').fill('Wrong');
    await page.getByPlaceholder('Password').fill('wrong123');
@@ -41,7 +41,7 @@ test.only('TC_LOGIN_03', async({page})=>{
 
 //test case 4//
 
-test.only('TC_LOGIN_04', async({page})=>{
+test('TC_LOGIN_04', async({page})=>{
 
  await page.getByPlaceholder('Username').fill('');
    await page.getByPlaceholder('Password').fill('wrong123');
@@ -51,7 +51,7 @@ test.only('TC_LOGIN_04', async({page})=>{
  
    // test case 5//
 
-   test.only('TC_LOGIN_05', async({page})=>{
+   test('TC_LOGIN_05', async({page})=>{
 
  await page.getByPlaceholder('Username').fill('Admin');
    await page.getByPlaceholder('Password').fill('');
