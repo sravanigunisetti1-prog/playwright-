@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","30110","orange","chromium","2026-08-13","broken","2026-08-13","","orangehrm.spec.ts","",""
+"","20457","orange","webkit","2026-08-13","passed","2026-08-13","","orangehrm.spec.ts","",""
+"","13466","file upload","firefox","2026-08-13","passed","2026-08-13","","fileupload.spec.ts","",""
+"","12736","file upload","chromium","2026-08-13","passed","2026-08-13","","fileupload.spec.ts","",""
+"","11464","file upload","webkit","2026-08-13","passed","2026-08-13","","fileupload.spec.ts","",""
+"","23765","orange","firefox","2026-08-13","passed","2026-08-13","","orangehrm.spec.ts","",""

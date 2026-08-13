@@ -11,5 +11,5 @@ test("orange",async({page})=>{
    await page.getByPlaceholder('Username').fill('Admin');
    await page.getByPlaceholder('Password').fill('admin123');
    await page.getByRole('button', {name:'Login'}).click();
-   await page.waitForTimeout(5000);
+   await page.waitForTimeout(3000);
 });
