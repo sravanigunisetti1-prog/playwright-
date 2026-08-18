@@ -1,33 +1,41 @@
-@echo off
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/sravanigunisetti1-prog/playwright-.git'
+                }
+            }
+        stage('Install Playwright ') {
+            steps {
+                bat 'npm  playwright install'
+            }
+        }
 
+        stage('Install Dependencies ') {
+            steps {
+                bat 'npm  playwright install'
+            }
+         stage('Run Test  ') {
+            steps {
+                bat 'call "C:\Users\prabh\OneDrive\Desktop\New Playwright\Playwright project new\pipeline.bat"
+            }
 
-echo ============================
-echo Installing Dependencies...
-echo ============================
+        stage('Pusblish Reports ') {
+            steps {
+                PublishHTML([
+                    reportDir: 'Playwright-report',
+                    reportFiles: 'index.html'
+                    reportName: 'Playwright Test Report'
+                    keepAll: true, 
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: false
 
+                ])
+            }
+        }
+       
+    }
 
-call npm install
-
-
-echo ============================
-echo Installing Playwright Browsers
-echo ============================
-
-
-call npx playwright install
-
-
-echo ============================
-echo Running Playwright Tests...
-echo ============================
-
-
-call npx playwright test
-
-
-echo ============================
-echo Test Execution Completed
-echo ============================
-
-
-exit /b %errorlevel%
+}   
