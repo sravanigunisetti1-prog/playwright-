@@ -1,8 +1,11 @@
- import{test,expect} from '@playwright/test'
+import { test } from '@playwright/test';
+import { FileUploadPage } from '../pages/FileUploadPage';
 
-test('file upload', async({page})=>{
-await page.goto('https://the-internet.herokuapp.com/upload');
+test('file upload', async ({ page }) => {
+  const fileUploadPage = new FileUploadPage(page);
 
-await page.locator('input#file-upload').setInputFiles('files/taashvik.txt');
-await page.locator('input#file-submit').click();
-await page.waitForTimeout(5000);})
+  await fileUploadPage.goto();
+  await fileUploadPage.uploadFile('files/taashvik.txt');
+  await fileUploadPage.clickUpload();
+  await fileUploadPage.verifyUploadSuccess();
+});
